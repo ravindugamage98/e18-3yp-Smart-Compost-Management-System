@@ -1,0 +1,70 @@
+{
+  "uuid": "6083dc49b13f5fa377d99f8b5a1c5092",
+  "path": "Offline/3yp",
+  "name": "3yp",
+  "content": "",
+  "created_at": "2022-12-20 20:06:26",
+  "updated_at": "2022-12-20 20:53:10",
+  "stick": "",
+  "documents": [
+    {
+      "uuid": "65cd787bcf6b2b6fa5757330ee712938",
+      "title": "Sheet_1",
+      "description": "",
+      "docType": "1",
+      "master": "f10102ee5debb509564db8eb130e7c54",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "5f17bba28bd34c0e8919c3d8e11b9aea": 1,
+        "3ce630b4a7bd4c4a87c382e66d21f4f8": 1
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "Grove - OLED Display 0.96''",
+          1,
+          "GROVE - OLED DISPLAY 0.96''",
+          "U1",
+          {
+            "BOM_Supplier Part": "undefined",
+            "BOM_Supplier": "SeeedStudio",
+            "BOM_Manufacturer Part": "",
+            "puuid": "be350629973d4d2fa82f3a93755882f1",
+            "uuid": "3ce630b4a7bd4c4a87c382e66d21f4f8"
+          }
+        ],
+        [
+          "NODEMCU-32SLUA",
+          1,
+          "COMM-TH_NODEMCU-32SLUA",
+          "U2",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C111436",
+            "BOM_Manufacturer": "Ai-Thinker(安信可)",
+            "BOM_Manufacturer Part": "NodeMCU-32SLua",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "6cdda41777024086945d62a5a913685c",
+            "uuid": "5f17bba28bd34c0e8919c3d8e11b9aea"
+          }
+        ]
+      ],
+      "updateTime": 1671549790,
+      "createTime": 1671546988,
+      "histories": [],
+      "created_at": "2022-12-20 20:06:28",
+      "updated_at": "2022-12-20 20:53:10"
+    }
+  ],
+  "sort": [],
+  "title": "3yp",
+  "foldername": "3yp",
+  "schfilename": "3yp.json",
+  "schfilemtime": 1671549791029
+}

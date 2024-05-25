@@ -1,0 +1,71 @@
+{
+  "uuid": "6083dc49b13f5fa377d99f8b5a1c5092",
+  "path": "Offline/3yp",
+  "name": "3yp",
+  "content": "",
+  "created_at": "2022-12-20 20:06:26",
+  "updated_at": "2022-12-20 20:58:07",
+  "stick": "",
+  "documents": [
+    {
+      "uuid": "65cd787bcf6b2b6fa5757330ee712938",
+      "title": "Sheet_1",
+      "description": "",
+      "docType": "1",
+      "master": "d1d6c8cc1d02fb9d73cd5ac6314256ed",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "5f17bba28bd34c0e8919c3d8e11b9aea": 1,
+        "eea74e3a16f548f383486f844f2fd995": 1
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "0.96OLED_4P",
+          1,
+          "0.96OLED_4P",
+          "OLED1",
+          {
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "puuid": "88b7b62f56d14ce0a65d98c420c09d52",
+            "uuid": "eea74e3a16f548f383486f844f2fd995"
+          }
+        ],
+        [
+          "NODEMCU-32SLUA",
+          1,
+          "COMM-TH_NODEMCU-32SLUA",
+          "U2",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C111436",
+            "BOM_Manufacturer": "Ai-Thinker(安信可)",
+            "BOM_Manufacturer Part": "NodeMCU-32SLua",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "6cdda41777024086945d62a5a913685c",
+            "uuid": "5f17bba28bd34c0e8919c3d8e11b9aea"
+          }
+        ]
+      ],
+      "updateTime": 1671550087,
+      "createTime": 1671546988,
+      "histories": [],
+      "created_at": "2022-12-20 20:06:28",
+      "updated_at": "2022-12-20 20:58:07"
+    }
+  ],
+  "sort": [],
+  "title": "3yp",
+  "foldername": "3yp",
+  "schfilename": "3yp.json",
+  "schfilemtime": 1671550087586
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Compost Management System | A system which is capable of monitoring and managing quality of compost mixtures.</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/cepdnaclk/e18-3yp-Smart-Compost-Management-System/main/docs/images/frontend/favicon.ico" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/4a126a3fdd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+
+<body>
+    <div class="bg-secondary bg-gradient bg-opacity-25"></div>
+        <nav class="navbar  navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-5">
+                <a class="navbar-brand" href="/"><img src="https://raw.githubusercontent.com/cepdnaclk/e18-3yp-Smart-Compost-Management-System/main/docs/images/frontend/header-logo.png"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="d-flex justify-content-end">	
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item px-3 pr-5"><a class="nav-link" href="/">Home</a></li>
+
+                            <li class="nav-item px-3"><a class="nav-link" href="/about">About</a></li>
+                        </ul>
+                        <!-- Uncomment to Enable searchbar -->
+                        <!-- <form class="d-flex"> -->
+                        <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+                        <!-- <button class="btn btn-outline-primary" type="submit">Search</button> -->
+                        <!-- </form> -->
+                    </div>
+                </div>	
+            </div>
+        </nav>
+
+        <div class="container vh-75">
+            <form class="signup-form">
+                <div class="form-group">
+                    <label for="companyName">Company Name</label>
+                    <input type="companyName" class="form-control" id="companyName" name="companyName">
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="location" class="form-control" id="location" name="location">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password">
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
+                </div>
+
+                <div style="margin-bottom: 10px;">
+                    <a href="/">Have an account? Click here to login</a>
+                </div>
+                <button type="submit" id="signup-btn" class="btn btn-primary">Signup</button>
+            </form>
+        </div>
+
+        <footer class="mt-5">
+            <p><a class="text-decoration-none text-white" href="#">Back to top</a></p>
+        </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/js/app.js"></script>
+
+    <script>
+                             
+        const form = $(".signup-form");
+
+        form.validate({
+            rules:{
+                email: {
+                    required: true,
+                },
+                companyName: {
+                    required: true
+                },
+                location: {
+                    required: true
+                },
+                password: {
+                    required: true,
+                    minlength: 8
+                },
+                confirmPassword: {
+                    required: true,
+                    equalTo: "#password"
+                }
+            },
+            messages: {
+                email: {
+                    required: "Please enter your e-mail address",
+                    email: "Please provide a valid e-mail address"
+                },
+                password: {
+                    required: "Please enter a password",
+                    minlength: "The password must be at least 8 characters long"
+                },
+                password_confirm: {
+                    required: "Please enter the password again",
+                    equalTo: "The passwords do not match"
+                }
+            }
+        });
+
+        form.on("submit", (e) => {
+            e.preventDefault();
+
+            if(form.valid()){
+                signup();
+            }
+        });
+
+        const signup = async () => {
+            const url = "/api/users/";
+
+            showLoader("#signup-btn", {content: generalLoader});
+
+            const data = {
+                email: $("#email").val(),
+                location: $("#location").val(),
+                companyName: $("#companyName").val(),
+                password: $("#password").val()
+            }
+
+            try{
+                const response = await fetch(url, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const user = await response.json();
+                console.log(user);
+
+                if(user.error){
+                    return showError(user.error);
+                }
+
+                window.location.replace("/?msg=Confirm you email account by click the confirm link in your email.");
+            }catch(e){
+                showError("Unable to signup. Something went wrong");
+            }finally{
+                hideLoader("#signup-btn", {content: "Signup"});
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,355 @@
+{
+  "uuid": "bb634dd535eb64c8cef537344e938691",
+  "path": "Offline/3yp_project",
+  "name": "3yp_project",
+  "content": "PCB for 3yp",
+  "created_at": "2023-01-07 07:57:06",
+  "updated_at": "2023-01-11 17:20:41",
+  "stick": "",
+  "documents": [
+    {
+      "uuid": "98a98893628d3706e56df88b8b9edc72",
+      "title": "Sheet_1",
+      "description": "",
+      "docType": "1",
+      "master": "12ea60ce2daf1d1ce1136db0d78d7de1",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "8371bccb25af48c09813059d9af2ff10": 1,
+        "877daa8628a44d84842aac0a0584b0c2": 1,
+        "7dc24984729f41f3827b0d4222163cf6": 2,
+        "7b66beb2ab9f4d98b70794a5cd04df1c": 2,
+        "abe391f632444f4ba8696c7e198b6b51": 5,
+        "85a235c6369c409491442f8698bbb5d6": 1
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "Display",
+          1,
+          "I2C_HEADER LOWCOMOCO GND/VCC/SCL/SDA",
+          "H1",
+          {
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "eb95ec3742d742ddb01f4a76b2ec0e4d",
+            "uuid": "7b66beb2ab9f4d98b70794a5cd04df1c"
+          }
+        ],
+        [
+          "ADS1115",
+          1,
+          "I2C_HEADER LOWCOMOCO GND/VCC/SCL/SDA",
+          "H2",
+          {
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "eb95ec3742d742ddb01f4a76b2ec0e4d",
+            "uuid": "7b66beb2ab9f4d98b70794a5cd04df1c"
+          }
+        ],
+        [
+          "Header-2Pin",
+          1,
+          "HEADER-2PIN",
+          "H3",
+          {
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "45ccbe1c871e423984ff8633290f556e",
+            "uuid": "85a235c6369c409491442f8698bbb5d6"
+          }
+        ],
+        [
+          "Motor",
+          1,
+          "PINHEADER2PIN",
+          "J1",
+          {
+            "BOM_Supplier Part": "C124375",
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "puuid": "02991e55c7b94da183fa1540cb550c73",
+            "uuid": "abe391f632444f4ba8696c7e198b6b51"
+          }
+        ],
+        [
+          "Power Supply",
+          1,
+          "PINHEADER2PIN",
+          "J2",
+          {
+            "BOM_Supplier Part": "C124375",
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "puuid": "02991e55c7b94da183fa1540cb550c73",
+            "uuid": "abe391f632444f4ba8696c7e198b6b51"
+          }
+        ],
+        [
+          "MQ-2 Sensor",
+          1,
+          "PINHEADER2PIN",
+          "J3",
+          {
+            "BOM_Supplier Part": "C124375",
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "puuid": "02991e55c7b94da183fa1540cb550c73",
+            "uuid": "abe391f632444f4ba8696c7e198b6b51"
+          }
+        ],
+        [
+          "Moisture Sensor",
+          2,
+          "PINHEADER2PIN",
+          "J4,J5",
+          {
+            "BOM_Supplier Part": "C124375",
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "puuid": "02991e55c7b94da183fa1540cb550c73",
+            "uuid": "abe391f632444f4ba8696c7e198b6b51"
+          }
+        ],
+        [
+          "NodeMCU-ESP-12E",
+          1,
+          "NODEMCU-ESP-12E",
+          "U1",
+          {
+            "BOM_Manufacturer Part": "NodeMCU-ESP-12E",
+            "puuid": "84ae81e9ee0b4a57b9c1c1028a2ae197",
+            "uuid": "8371bccb25af48c09813059d9af2ff10"
+          }
+        ],
+        [
+          "4.7K Resistor",
+          1,
+          "4.7K RESISTOR",
+          "U2",
+          {
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "707ef5d56900487f8268ad18faa00a83",
+            "uuid": "877daa8628a44d84842aac0a0584b0c2"
+          }
+        ],
+        [
+          "DS18B20",
+          2,
+          "ЗАЖИМ DS18B20",
+          "U3,U4",
+          {
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "764afeca63c74f63824f15b719119221",
+            "uuid": "7dc24984729f41f3827b0d4222163cf6"
+          }
+        ]
+      ],
+      "updateTime": 1673437841,
+      "createTime": 1673058426,
+      "histories": [],
+      "created_at": "2023-01-07 07:57:06",
+      "updated_at": "2023-01-11 17:20:41"
+    },
+    {
+      "uuid": "59d63b974373ef9d0459704cc1f986c7",
+      "title": "Sheet_2",
+      "description": "",
+      "docType": "1",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {},
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "Display",
+          1,
+          "I2C_HEADER LOWCOMOCO GND/VCC/SCL/SDA",
+          "H1",
+          {
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "eb95ec3742d742ddb01f4a76b2ec0e4d",
+            "uuid": "7b66beb2ab9f4d98b70794a5cd04df1c"
+          }
+        ],
+        [
+          "ADS1115",
+          1,
+          "I2C_HEADER LOWCOMOCO GND/VCC/SCL/SDA",
+          "H2",
+          {
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "eb95ec3742d742ddb01f4a76b2ec0e4d",
+            "uuid": "7b66beb2ab9f4d98b70794a5cd04df1c"
+          }
+        ],
+        [
+          "Motor",
+          1,
+          "PINHEADER2PIN",
+          "J1",
+          {
+            "BOM_Supplier Part": "C124375",
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "puuid": "02991e55c7b94da183fa1540cb550c73",
+            "uuid": "abe391f632444f4ba8696c7e198b6b51"
+          }
+        ],
+        [
+          "Power Supply",
+          1,
+          "PINHEADER2PIN",
+          "J2",
+          {
+            "BOM_Supplier Part": "C124375",
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "puuid": "02991e55c7b94da183fa1540cb550c73",
+            "uuid": "abe391f632444f4ba8696c7e198b6b51"
+          }
+        ],
+        [
+          "MQ-2 Sensor",
+          1,
+          "PINHEADER2PIN",
+          "J3",
+          {
+            "BOM_Supplier Part": "C124375",
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "puuid": "02991e55c7b94da183fa1540cb550c73",
+            "uuid": "abe391f632444f4ba8696c7e198b6b51"
+          }
+        ],
+        [
+          "Moisture Sensor",
+          2,
+          "PINHEADER2PIN",
+          "J4,J5",
+          {
+            "BOM_Supplier Part": "C124375",
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "puuid": "02991e55c7b94da183fa1540cb550c73",
+            "uuid": "abe391f632444f4ba8696c7e198b6b51"
+          }
+        ],
+        [
+          "NodeMCU-ESP-12E",
+          1,
+          "NODEMCU-ESP-12E",
+          "U1",
+          {
+            "BOM_Manufacturer Part": "NodeMCU-ESP-12E",
+            "puuid": "84ae81e9ee0b4a57b9c1c1028a2ae197",
+            "uuid": "8371bccb25af48c09813059d9af2ff10"
+          }
+        ],
+        [
+          "4.7K Resistor",
+          1,
+          "4.7K RESISTOR",
+          "U2",
+          {
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "707ef5d56900487f8268ad18faa00a83",
+            "uuid": "877daa8628a44d84842aac0a0584b0c2"
+          }
+        ],
+        [
+          "DS18B20",
+          2,
+          "ЗАЖИМ DS18B20",
+          "U3,U4",
+          {
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "764afeca63c74f63824f15b719119221",
+            "uuid": "7dc24984729f41f3827b0d4222163cf6"
+          }
+        ]
+      ],
+      "updateTime": 1673071124,
+      "createTime": 1673071124,
+      "histories": [],
+      "created_at": "2023-01-07 11:28:44",
+      "updated_at": "2023-01-07 11:28:44"
+    },
+    {
+      "uuid": "23954b78128e2588726814ce2dee9c4e",
+      "puuid": "bb634dd535eb64c8cef537344e938691",
+      "title": "PCB_3yp_project",
+      "filename": "PCB_3yp_project.json",
+      "description": "",
+      "docType": "3",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "eb95ec3742d742ddb01f4a76b2ec0e4d": 2,
+        "02991e55c7b94da183fa1540cb550c73": 5,
+        "84ae81e9ee0b4a57b9c1c1028a2ae197": 1,
+        "707ef5d56900487f8268ad18faa00a83": 1,
+        "764afeca63c74f63824f15b719119221": 2
+      },
+      "BOM": [],
+      "updateTime": 1673077793,
+      "createTime": 1673077793,
+      "histories": [],
+      "created_at": "2023-01-07 13:19:53",
+      "updated_at": "2023-01-07 13:19:53"
+    }
+  ],
+  "sort": [
+    "98a98893628d3706e56df88b8b9edc72",
+    "59d63b974373ef9d0459704cc1f986c7"
+  ],
+  "title": "3yp_project",
+  "foldername": "3yp_project",
+  "schfilename": "3yp_project.json",
+  "schfilemtime": 1673437841172
+}

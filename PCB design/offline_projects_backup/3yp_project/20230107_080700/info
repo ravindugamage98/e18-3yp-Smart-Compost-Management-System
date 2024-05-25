@@ -1,0 +1,86 @@
+{
+  "uuid": "bb634dd535eb64c8cef537344e938691",
+  "path": "Offline/3yp_project",
+  "name": "3yp_project",
+  "content": "PCB for 3yp",
+  "created_at": "2023-01-07 07:57:06",
+  "updated_at": "2023-01-07 08:07:00",
+  "stick": "",
+  "documents": [
+    {
+      "uuid": "98a98893628d3706e56df88b8b9edc72",
+      "title": "Sheet_1",
+      "description": "",
+      "docType": "1",
+      "master": "473af9b6fb0bd0ba0c93d39773e71a01",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "8371bccb25af48c09813059d9af2ff10": 1,
+        "877daa8628a44d84842aac0a0584b0c2": 1
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "NodeMCU-ESP-12E",
+          1,
+          "NODEMCU-ESP-12E",
+          "U1",
+          {
+            "BOM_Manufacturer Part": "NodeMCU-ESP-12E",
+            "puuid": "84ae81e9ee0b4a57b9c1c1028a2ae197",
+            "uuid": "8371bccb25af48c09813059d9af2ff10"
+          }
+        ],
+        [
+          "4.7K Resistor",
+          1,
+          "4.7K RESISTOR",
+          "U2",
+          {
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "707ef5d56900487f8268ad18faa00a83",
+            "uuid": "877daa8628a44d84842aac0a0584b0c2"
+          }
+        ]
+      ],
+      "updateTime": 1673059020,
+      "createTime": 1673058426,
+      "histories": [],
+      "created_at": "2023-01-07 07:57:06",
+      "updated_at": "2023-01-07 08:07:00"
+    },
+    {
+      "uuid": "c46bf39216f92cf9e65a1d8f9158a260",
+      "puuid": "bb634dd535eb64c8cef537344e938691",
+      "title": "PCB_3yp_project",
+      "filename": "PCB_3yp_project.json",
+      "description": "",
+      "docType": "3",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "84ae81e9ee0b4a57b9c1c1028a2ae197": 1
+      },
+      "BOM": [],
+      "updateTime": 1673058798,
+      "createTime": 1673058798,
+      "histories": [],
+      "created_at": "2023-01-07 08:03:18",
+      "updated_at": "2023-01-07 08:03:18"
+    }
+  ],
+  "sort": [],
+  "title": "3yp_project",
+  "foldername": "3yp_project",
+  "schfilename": "3yp_project.json",
+  "schfilemtime": 1673059020450
+}

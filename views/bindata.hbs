@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Compost Management System | A system which is capable of monitoring and managing quality of compost mixtures.</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/cepdnaclk/e18-3yp-Smart-Compost-Management-System/main/docs/images/frontend/favicon.ico" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/4a126a3fdd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="bg-secondary bg-gradient bg-opacity-25"></div>
+        <nav class="navbar  navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-5">
+                <a class="navbar-brand" href="/"><img src="https://raw.githubusercontent.com/cepdnaclk/e18-3yp-Smart-Compost-Management-System/main/docs/images/frontend/header-logo.png"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="d-flex justify-content-end">	
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item px-3 pr-5" style="position: relative; right:80px;"><a class="nav-link" style="margin-right: 50px;" href="/bindata">Home</a></li>
+
+                            <form class="form-inline my-2 my-lg-0" id="search_form" style="position: relative; right:100px;">
+                              <input class="form-control mr-sm-2" type="search" placeholder="Search Bin" aria-label="Search" id="search_text">
+                              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                            </form>
+
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="position: relative; right:70px;">
+                              <ul class="navbar-nav ml-auto">
+                                  <li class="nav-item dropdown">
+                                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          <span id="username">{{user.companyName}}</span>
+                                          <img class="profile-image" src="/images/{{user.imagePath}}" alt="">
+                                      </a>
+                                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                      <a class="dropdown-item" href="/about">About</a>
+                                      <a class="dropdown-item" href="/profile">Profile Settings</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="/">Logout</a>
+                                      </div>
+                                  </li>
+                              </ul>
+                            </div> 
+
+                            <div class="btn-group" style="position: relative; right:50px;" id="dropdownItem">
+                              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-sharp fa-solid fa-bell"></i>
+                                <a class="badge rounded-pill badge-notification bg-danger" id="totalNotifications"></a>
+                              </button>
+                              <div class="dropdown-menu" id="dropdown-notify-menu">
+                              </div>
+                            </div>
+                        </ul>
+
+                        <script>
+                          var tot = localStorage.getItem("totalNotifys")
+                          if (tot>0){
+                            document.querySelector(".btn-group .btn .badge").innerHTML = tot;
+                          }
+                        </script>
+                        <!-- Uncomment to Enable searchbar -->
+                        <!-- <form class="d-flex"> -->
+                        <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+                        <!-- <button class="btn btn-outline-primary" type="submit">Search</button> -->
+                        <!-- </form> -->
+                    </div>
+                </div>	
+            </div>
+        </nav>
+
+        <div class="container vh-75">
+            <div class="row">
+                <div class="container col-sm-12 col-md-10 col-lg-10 mx-auto mt-3 py-2">
+                    <h1 align="center">Welcome!</h1>
+                    <p align="center">It's very easy to monitor and manage the quality of compost using Smart Compost Management System.</p>
+
+                    <div>
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#BinCreateModal" id="btn_add">
+                        ADD a BIN
+                      </button>
+
+                      <!-- Modal 1 -->
+                      <div class="modal fade" id="BinCreateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Bin Details</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+
+                            <div class="modal-body">
+                              <form id="create-bin-form">
+                                <div class="form-group">
+                                  <label for="exampleFormControlInput1">Bin Number</label>
+                                  <input type="number"  class="form-control" id="binNumber" name="binNumber">
+                                </div>
+
+                                <div class="form-group">
+                                  <label for="exampleFormControlSelect1">Bin Location</label>
+                                  <input type="text" class="form-control" id="binLocation" name="binLocation">
+                                </div>
+
+                                <div class="form-group">
+                                  <label for="exampleFormControlSelect1">Compost Status</label>
+                                  <input type="text" class="form-control" id="compostStatus" name="compostStatus">
+                                </div>
+                                <div class="modal-footer mt-2">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                  <button type="submit" class="btn btn-primary">Save changes</button>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Modal 2 -->
+                      <div class="modal fade" id="BinUpdateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Update Bin</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+
+                            <div class="modal-body">
+                              <form id="update-bin-form">
+                                <input type="hidden" id="Update-binNumber" value="">
+
+                                <div class="form-group">
+                                  <label for="exampleFormControlSelect1">Bin Location</label>
+                                  <input type="text" class="form-control" id="Update-binLocation" name="update_binLocation">
+                                </div>
+
+                                <div class="form-group">
+                                  <label for="exampleFormControlSelect1">Compost Status</label>
+                                  <input type="text" class="form-control" id="Update-compostStatus" name="update_compostStatus">
+                                </div>
+
+                                <div class="modal-footer mt-2">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                  <button type="submit" class="btn btn-primary">Save changes</button>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    
+                    <br>
+
+                    <div class="row row-cols-1 row-cols-md-3 g-4" id="card-wrapper">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mt-5">
+            <p><a class="text-decoration-none text-white" href="#">Back to top</a></p>
+        </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/models/bins.js"></script>
+</body>
+</html>

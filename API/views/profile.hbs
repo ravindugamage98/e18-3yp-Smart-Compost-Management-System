@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Compost Management System | A system which is capable of monitoring and managing quality of compost mixtures.</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/cepdnaclk/e18-3yp-Smart-Compost-Management-System/main/docs/images/frontend/favicon.ico" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/4a126a3fdd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="bg-secondary bg-gradient bg-opacity-25"></div>
+        <nav class="navbar  navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-5">
+                <a class="navbar-brand" href="/"><img src="https://raw.githubusercontent.com/cepdnaclk/e18-3yp-Smart-Compost-Management-System/main/docs/images/frontend/header-logo.png"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="d-flex justify-content-end">	
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item px-3 pr-5"><a class="nav-link" href="/bindata">Home</a></li>
+
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                              <ul class="navbar-nav ml-auto">
+                                  <li class="nav-item dropdown">
+                                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          <span id="username">{{user.companyName}}</span>
+                                          <img class="profile-image" src="/images/{{user.imagePath}}" alt="">
+                                      </a>
+                                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                      <a class="dropdown-item" href="/about">About</a>
+                                      <a class="dropdown-item" href="/profile">Profile Settings</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="/">Logout</a>
+                                      </div>
+                                  </li>
+                              </ul>
+                            </div> 
+                        </ul>
+                        <!-- Uncomment to Enable searchbar -->
+                        <!-- <form class="d-flex"> -->
+                        <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+                        <!-- <button class="btn btn-outline-primary" type="submit">Search</button> -->
+                        <!-- </form> -->
+                    </div>
+                </div>	
+            </div>
+        </nav>
+
+        <div class="container vh-75">
+            <div class="main">
+                <div class="header">
+                    <h1>Profile Setting</h1>
+                </div>
+
+                <form enctype="multipart/form-data"> 
+                    <div class="form-group">
+                        <label for="companyName">Company Name</label>
+                        <input type="text" class="form-control" id="companyName" name="companyName" value="{{user.companyName}}">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" value="{{user.email}}">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" class="form-control" id="location" name="location" value="{{user.location}}">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="profileImage">Profile Image</label>
+                        <input type="file" class="form-control-file" id="profileImage" name="profileImage" aria-describedby="emailHelp">
+                    </div>
+
+                    <button type="submit" id="update-btn" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    
+        <footer class="mt-5">
+            <p><a class="text-decoration-none text-white" href="#">Back to top</a></p>
+        </footer>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/js/app.js"></script>
+
+    <script>
+       const form = $("form");
+
+       form.validate({
+           rules:{
+               companyName: {
+                   required: true
+               },
+               email: {
+                   required: true
+               },
+               location: {
+                   required: true
+               }
+           }
+        });
+
+        form.on("submit", (e) => {
+            e.preventDefault();
+
+            if(form.valid()){
+                updateProfile();
+            }
+        });
+
+        const updateProfile = async () => {
+            const url = "/api/users";
+
+            showLoader("#update-btn", {content: generalLoader});  
+
+            const imageFile = document.querySelector("#profileImage");
+
+            const formData = new FormData();
+            formData.append("companyName", $("#companyName").val());
+            formData.append("email", $("#email").val());
+            formData.append("location", $("#location").val());
+
+            if(imageFile.files.length > 0){
+                formData.append("profileImage", imageFile.files[0]);
+            }
+
+
+            try{
+                const response = await fetch(url, {
+                    method: "PATCH",
+                    body: formData
+                });
+
+                const user = await response.json();
+
+                if(!user){
+                   return showError(user.error);
+                }
+
+                $("#username").text(user.companyName);
+                {{!-- $("..profile-image").attr("src", "/images/" + user.imagePath); --}}
+                document.querySelector(".profile-image").setAttribute("src", "/images/" + user.imagePath);
+
+                showSuccess("Profile updated successfully!");
+                imageFile.value = "";
+            }catch(e){
+                showError("Something went wrong. Unable to update profile.");
+            }finally{
+                hideLoader("#update-btn", {content: "Submit"});
+            }
+        }
+    </script>
+
+</body>
+</html>

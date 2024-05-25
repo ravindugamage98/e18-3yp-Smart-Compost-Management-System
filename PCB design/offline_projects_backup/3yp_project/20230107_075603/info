@@ -1,0 +1,39 @@
+{
+  "uuid": "3b066a229d3446548f4910741df69af0",
+  "path": "Offline/3yp_project",
+  "name": "3yp_project",
+  "content": "",
+  "created_at": "2023-01-06 16:36:48",
+  "updated_at": "2023-01-06 16:36:49",
+  "stick": "",
+  "documents": [
+    {
+      "uuid": "01fe3514c88d9118eb7e0b5fcf2cc8f5",
+      "title": "Sheet_1",
+      "description": "",
+      "docType": "1",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {},
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ]
+      ],
+      "updateTime": 1673003209,
+      "createTime": 1673003209,
+      "histories": [],
+      "created_at": "2023-01-06 16:36:49",
+      "updated_at": "2023-01-06 16:36:49"
+    }
+  ],
+  "sort": [],
+  "title": "3yp_project",
+  "foldername": "3yp_project",
+  "schfilename": "3yp_project.json",
+  "schfilemtime": 1673003209183
+}
